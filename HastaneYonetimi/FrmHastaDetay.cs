@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace HastaneYonetimi
 {
-    public partial class Form1 : Form
+    public partial class FrmHastaDetay : Form
     {
-        public Form1()
+        public FrmHastaDetay()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
