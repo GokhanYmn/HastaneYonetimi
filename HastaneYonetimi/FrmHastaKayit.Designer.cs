@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHastaKayit));
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.mskTc = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,7 +49,7 @@
             this.txtSifre.Location = new System.Drawing.Point(178, 211);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(161, 31);
-            this.txtSifre.TabIndex = 8;
+            this.txtSifre.TabIndex = 5;
             // 
             // mskTc
             // 
@@ -56,7 +57,7 @@
             this.mskTc.Mask = "000000000000";
             this.mskTc.Name = "mskTc";
             this.mskTc.Size = new System.Drawing.Size(161, 31);
-            this.mskTc.TabIndex = 7;
+            this.mskTc.TabIndex = 3;
             // 
             // label3
             // 
@@ -90,14 +91,14 @@
             this.txtAd.Location = new System.Drawing.Point(178, 62);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(161, 31);
-            this.txtAd.TabIndex = 10;
+            this.txtAd.TabIndex = 1;
             // 
             // txtSoyad
             // 
             this.txtSoyad.Location = new System.Drawing.Point(178, 99);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(161, 31);
-            this.txtSoyad.TabIndex = 12;
+            this.txtSoyad.TabIndex = 2;
             // 
             // label4
             // 
@@ -114,7 +115,7 @@
             this.mskTelefon.Mask = "(999) 000-0000";
             this.mskTelefon.Name = "mskTelefon";
             this.mskTelefon.Size = new System.Drawing.Size(161, 31);
-            this.mskTelefon.TabIndex = 13;
+            this.mskTelefon.TabIndex = 4;
             // 
             // label5
             // 
@@ -134,7 +135,7 @@
             this.cmbCinsiyet.Location = new System.Drawing.Point(178, 248);
             this.cmbCinsiyet.Name = "cmbCinsiyet";
             this.cmbCinsiyet.Size = new System.Drawing.Size(161, 31);
-            this.cmbCinsiyet.TabIndex = 15;
+            this.cmbCinsiyet.TabIndex = 6;
             // 
             // label6
             // 
@@ -151,14 +152,17 @@
             this.btnKayitYap.Location = new System.Drawing.Point(178, 298);
             this.btnKayitYap.Name = "btnKayitYap";
             this.btnKayitYap.Size = new System.Drawing.Size(161, 45);
-            this.btnKayitYap.TabIndex = 17;
+            this.btnKayitYap.TabIndex = 7;
             this.btnKayitYap.Text = "Kayıt Yap";
             this.btnKayitYap.UseVisualStyleBackColor = false;
+            this.btnKayitYap.Click += new System.EventHandler(this.btnKayitYap_Click);
             // 
             // FrmHastaKayit
             // 
+            this.AcceptButton = this.btnKayitYap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(627, 391);
             this.Controls.Add(this.btnKayitYap);
@@ -175,9 +179,11 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
             this.Name = "FrmHastaKayit";
-            this.Text = "FrmHastaKayit";
+            this.Text = "HastaKayit";
             this.ResumeLayout(false);
             this.PerformLayout();
 
