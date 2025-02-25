@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHastaGiris));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -89,6 +90,7 @@
             this.lnkUyeol.TabIndex = 5;
             this.lnkUyeol.TabStop = true;
             this.lnkUyeol.Text = "Üye Ol";
+            this.lnkUyeol.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkUyeol_LinkClicked);
             // 
             // btnGirisYap
             // 
@@ -98,11 +100,14 @@
             this.btnGirisYap.TabIndex = 6;
             this.btnGirisYap.Text = "Giriş Yap";
             this.btnGirisYap.UseVisualStyleBackColor = true;
+            this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
             // 
             // FrmHastaGiris
             // 
+            this.AcceptButton = this.btnGirisYap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(545, 330);
             this.Controls.Add(this.btnGirisYap);
@@ -113,9 +118,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
             this.Name = "FrmHastaGiris";
-            this.Text = "FrmHastaGiris";
+            this.Text = "Hasta Giris";
             this.ResumeLayout(false);
             this.PerformLayout();
 

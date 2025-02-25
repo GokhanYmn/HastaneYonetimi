@@ -21,5 +21,26 @@ namespace HastaneYonetimi
         {
 
         }
+
+        private void btnHastaGirisi_Click(object sender, EventArgs e)
+        {
+            FrmHastaGiris frm = new FrmHastaGiris();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnDoktorGirisi_Click(object sender, EventArgs e)
+        {
+            FrmDoktorGiris frm = new FrmDoktorGiris();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnSekreterGirisi_Click(object sender, EventArgs e)
+        {
+            FrmSekreterGiris frm= new FrmSekreterGiris();
+            frm.Show();
+            this.Hide();
+        }
     }
 }
