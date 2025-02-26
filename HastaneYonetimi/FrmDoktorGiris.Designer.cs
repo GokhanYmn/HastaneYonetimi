@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoktorGiris));
             this.btnGirisYap = new System.Windows.Forms.Button();
             this.txtSifre = new System.Windows.Forms.TextBox();
             this.mskTc = new System.Windows.Forms.MaskedTextBox();
@@ -44,6 +45,7 @@
             this.btnGirisYap.TabIndex = 12;
             this.btnGirisYap.Text = "Giriş Yap";
             this.btnGirisYap.UseVisualStyleBackColor = true;
+            this.btnGirisYap.Click += new System.EventHandler(this.btnGirisYap_Click);
             // 
             // txtSifre
             // 
@@ -51,6 +53,7 @@
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(161, 31);
             this.txtSifre.TabIndex = 11;
+            this.txtSifre.UseSystemPasswordChar = true;
             // 
             // mskTc
             // 
@@ -90,8 +93,10 @@
             // 
             // FrmDoktorGiris
             // 
+            this.AcceptButton = this.btnGirisYap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(452, 284);
             this.Controls.Add(this.btnGirisYap);
@@ -101,9 +106,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
             this.Name = "FrmDoktorGiris";
-            this.Text = "FrmDoktorGiris";
+            this.Text = "Doktor Giriş";
             this.ResumeLayout(false);
             this.PerformLayout();
 

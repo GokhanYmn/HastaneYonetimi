@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace HastaneYonetimi
 {
@@ -15,6 +16,14 @@ namespace HastaneYonetimi
         public FrmDuyurular()
         {
             InitializeComponent();
+        }
+        Sqlbaglantisi bgl=new Sqlbaglantisi();
+        private void FrmDuyurular_Load(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            SqlDataAdapter sqlDataAdapter = new SqlDataAdapter("Select * From Tbl_duyurular",bgl.baglanti());
+            sqlDataAdapter.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
     }
 }

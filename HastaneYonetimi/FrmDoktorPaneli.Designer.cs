@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDoktorPaneli));
             this.cmbBrans = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtSifre = new System.Windows.Forms.TextBox();
@@ -51,7 +52,7 @@
             this.cmbBrans.Location = new System.Drawing.Point(158, 164);
             this.cmbBrans.Name = "cmbBrans";
             this.cmbBrans.Size = new System.Drawing.Size(161, 31);
-            this.cmbBrans.TabIndex = 45;
+            this.cmbBrans.TabIndex = 4;
             // 
             // label5
             // 
@@ -67,7 +68,7 @@
             this.txtSifre.Location = new System.Drawing.Point(158, 211);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(161, 31);
-            this.txtSifre.TabIndex = 43;
+            this.txtSifre.TabIndex = 5;
             // 
             // label3
             // 
@@ -83,7 +84,7 @@
             this.txtSoyad.Location = new System.Drawing.Point(158, 83);
             this.txtSoyad.Name = "txtSoyad";
             this.txtSoyad.Size = new System.Drawing.Size(161, 31);
-            this.txtSoyad.TabIndex = 41;
+            this.txtSoyad.TabIndex = 2;
             // 
             // label4
             // 
@@ -99,7 +100,7 @@
             this.txtAd.Location = new System.Drawing.Point(158, 46);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(161, 31);
-            this.txtAd.TabIndex = 39;
+            this.txtAd.TabIndex = 1;
             // 
             // label1
             // 
@@ -116,7 +117,7 @@
             this.mskTc.Mask = "000000000000";
             this.mskTc.Name = "mskTc";
             this.mskTc.Size = new System.Drawing.Size(161, 31);
-            this.mskTc.TabIndex = 37;
+            this.mskTc.TabIndex = 3;
             // 
             // label2
             // 
@@ -129,11 +130,13 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(408, 46);
+            this.dataGridView1.Location = new System.Drawing.Point(337, 46);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(367, 196);
+            this.dataGridView1.Size = new System.Drawing.Size(697, 303);
             this.dataGridView1.TabIndex = 46;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btnEkle
             // 
@@ -141,9 +144,10 @@
             this.btnEkle.Location = new System.Drawing.Point(158, 258);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(74, 41);
-            this.btnEkle.TabIndex = 47;
+            this.btnEkle.TabIndex = 6;
             this.btnEkle.Text = "Ekle";
             this.btnEkle.UseVisualStyleBackColor = false;
+            this.btnEkle.Click += new System.EventHandler(this.btnEkle_Click);
             // 
             // btnSil
             // 
@@ -151,9 +155,10 @@
             this.btnSil.Location = new System.Drawing.Point(245, 258);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(74, 41);
-            this.btnSil.TabIndex = 48;
+            this.btnSil.TabIndex = 7;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
@@ -161,16 +166,18 @@
             this.btnGuncelle.Location = new System.Drawing.Point(158, 306);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(161, 43);
-            this.btnGuncelle.TabIndex = 49;
+            this.btnGuncelle.TabIndex = 7;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = false;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // FrmDoktorPaneli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(818, 384);
+            this.ClientSize = new System.Drawing.Size(1058, 384);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnEkle);
@@ -186,9 +193,12 @@
             this.Controls.Add(this.mskTc);
             this.Controls.Add(this.label2);
             this.Font = new System.Drawing.Font("Corbel", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(5);
+            this.MaximizeBox = false;
             this.Name = "FrmDoktorPaneli";
-            this.Text = "FrmDoktorPaneli";
+            this.Text = "Doktor Paneli";
+            this.Load += new System.EventHandler(this.FrmDoktorPaneli_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
