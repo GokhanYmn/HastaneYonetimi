@@ -9,6 +9,7 @@ namespace HastaneYonetimi
     internal static class Program
     {
         /// <summary>
+        /// Hastane yönetimi
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
